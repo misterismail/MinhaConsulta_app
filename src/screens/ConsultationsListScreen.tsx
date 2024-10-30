@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
-import { View, Text, FlatList, StyleSheet, Button } from "react-native";
-import axios from "axios";
-import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { RootStackParamList } from "../navigation/AppNavigator"; // Certifique-se de importar isso
 import { useNavigation } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { Button, FlatList, StyleSheet, Text, View } from "react-native";
+import { RootStackParamList } from "../navigation/AppNavigator"; // Certifique-se de importar isso
 
 interface Consultation {
   id: number;
@@ -52,6 +52,10 @@ const ConsultationsListScreen = () => {
       <View style={styles.header}>
         <Button title="Voltar" onPress={() => navigation.navigate("Welcome")} />
       </View>
+      {/* Botão na parte superior */}
+      <View style={styles.header}>
+        <Button title="Cadastrar" onPress={() => navigation.navigate("ScheduleConsultation")} />
+      </View>
 
       {/* Lista de consultas */}
       <FlatList
@@ -67,12 +71,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
-    backgroundColor: "#fff",
+    backgroundColor: "#9333ea",
   },
   header: {
     paddingVertical: 8,
     paddingHorizontal: 16,
-    backgroundColor: "#f0f0f0",
+    backgroundColor: "##9333ea",
     alignItems: "flex-start",
   },
   consultationItem: {

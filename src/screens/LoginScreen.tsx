@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import { NativeBaseProvider, Box, Button, Input, Center } from "native-base";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { RootStackParamList } from "../navigation/AppNavigator";
+import { Box, Button, Center, Input, NativeBaseProvider } from "native-base";
+import React, { useState } from "react";
 import { Alert as RNAlert } from "react-native"; // Importar o Alert do React Native
 import { login } from "../api/auth"; // Importe a função de login que você já criou
+import { RootStackParamList } from "../navigation/AppNavigator";
 
 type LoginScreenNavigationProp = NativeStackNavigationProp<
   RootStackParamList,
@@ -45,7 +45,7 @@ const LoginScreen = ({ navigation }: Props) => {
             mb={4}
             value={username}
             onChangeText={setUsername}
-            bg={"white"}
+            bg={"#fff"}
             placeholderTextColor="#000000"
             _focus={{
               bg: '#e0e0e0', // Cor de fundo ao focar

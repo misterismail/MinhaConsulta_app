@@ -1,11 +1,11 @@
-import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import WelcomeScreen from "../screens/WelcomeScreen";
-import LoginScreen from "../screens/LoginScreen";
-import SignUpScreen from "../screens/SignUpScreen";
-import ConsultationsListScreen from "../screens/ConsultationsListScreen";
-import ScheduleConsultationScreen from "../screens/ScheduleConsultationScreen";
+import React from "react";
 import ConfirmAppointmentScreen from "../screens/ConfirmAppointmentScreen";
+import ConsultationsListScreen from "../screens/ConsultationsListScreen";
+import LoginScreen from "../screens/LoginScreen";
+import ScheduleConsultationScreen from "../screens/ScheduleConsultationScreen";
+import SignUpScreen from "../screens/SignUpScreen";
+import WelcomeScreen from "../screens/WelcomeScreen";
 
 // Definindo o RootStackParamList com todas as telas do projeto
 export type RootStackParamList = {
@@ -13,6 +13,7 @@ export type RootStackParamList = {
   Login: undefined;
   SignUp: undefined;
   ConsultationsList: undefined;
+  ConsultationsListScreen: undefined;
   ScheduleConsultation: undefined;
   ConfirmAppointment: undefined;
 };
@@ -25,32 +26,32 @@ const AppNavigator = () => {
       <Stack.Screen
         name="Welcome"
         component={WelcomeScreen}
-        options={{ title: "Tela Inicial", headerStyle:{backgroundColor: '#581c87' }, headerTintColor: '#ffffff' }} // Título personalizável
+        options={{ title: "Tela Inicial", headerStyle: { backgroundColor: '#581c87' }, headerTintColor: '#ffffff' }} // Título personalizável
       />
       <Stack.Screen
         name="Login"
         component={LoginScreen}
-        options={{ title: "Acesse sua conta", headerStyle:{backgroundColor: '#581c87' }, headerTintColor: '#ffffff' }} // Título personalizável
+        options={{ title: "Acesse sua conta", headerStyle: { backgroundColor: '#581c87' }, headerTintColor: '#ffffff' }} // Título personalizável
       />
       <Stack.Screen
         name="SignUp"
         component={SignUpScreen}
-        options={{ title: "Cadastrar", headerStyle:{backgroundColor: '#581c87' }, headerTintColor: '#ffffff' }} // Título personalizável
+        options={{ title: "Cadastrar", headerStyle: { backgroundColor: '#581c87' }, headerTintColor: '#ffffff' }} // Título personalizável
       />
       <Stack.Screen
         name="ConsultationsList"
         component={ConsultationsListScreen}
-        options={{ title: "Eventos Agendados", headerStyle:{backgroundColor: '#581c87' }, headerTintColor: '#ffffff' }} // Título personalizável
+        options={{ title: "Eventos Agendados", headerStyle: { backgroundColor: '#581c87' }, headerTintColor: '#ffffff' }} // Título personalizável
       />
       <Stack.Screen
         name="ScheduleConsultation"
         component={ScheduleConsultationScreen}
-        options={{ title: "Agendar Consulta", headerStyle:{backgroundColor: '#581c87' }, headerTintColor: '#ffffff' }} // Título personalizável
+        options={{ title: "Agendar Consulta", headerStyle: { backgroundColor: '#581c87' }, headerTintColor: '#ffffff' }} // Título personalizável
       />
       <Stack.Screen
         name="ConfirmAppointment"
         component={ConfirmAppointmentScreen}
-        options={{ title: "Confirmação de Agendamento", headerStyle:{backgroundColor: '#581c87' }, headerTintColor: '#ffffff' }} // Título personalizável
+        options={{ title: "Confirmação de Agendamento", headerStyle: { backgroundColor: '#581c87' }, headerTintColor: '#ffffff' }} // Título personalizável
       />
     </Stack.Navigator>
   );
