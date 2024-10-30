@@ -15,7 +15,7 @@ type Props = {
 const WelcomeScreen = ({ navigation }: Props) => {
   return (
     <NativeBaseProvider>
-      <Center flex={1} bg="white">
+      <Center flex={1} bg="purple.600">
         <Box>
           <Button onPress={() => navigation.navigate("Login")}>
             Ir para Login

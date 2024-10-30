@@ -38,13 +38,22 @@ const LoginScreen = ({ navigation }: Props) => {
 
   return (
     <NativeBaseProvider>
-      <Center flex={1} bg="white">
+      <Center flex={1} bg="purple.600">
         <Box>
           <Input
             placeholder="Usuário"
             mb={4}
             value={username}
             onChangeText={setUsername}
+            bg={"white"}
+            placeholderTextColor="#000000"
+            _focus={{
+              bg: '#e0e0e0', // Cor de fundo ao focar
+              borderColor: '#6200EE', // Cor da borda ao focar (opcional)
+            }}
+            _hover={{
+              bg: '#f0f0f0', // Cor de fundo ao passar o mouse (opcional)
+            }}
           />
           <Input
             placeholder="Senha"
@@ -52,6 +61,15 @@ const LoginScreen = ({ navigation }: Props) => {
             secureTextEntry
             value={password}
             onChangeText={setPassword}
+            bg={"white"}
+            placeholderTextColor="#000000"
+            _focus={{
+              bg: '#e0e0e0', // Cor de fundo ao focar
+              borderColor: '#6200EE', // Cor da borda ao focar (opcional)
+            }}
+            _hover={{
+              bg: '#f0f0f0', // Cor de fundo ao passar o mouse (opcional)
+            }}
           />
           <Button onPress={handleLogin}>Entrar</Button>
           <Button onPress={() => navigation.navigate("SignUp")} mt={4}>

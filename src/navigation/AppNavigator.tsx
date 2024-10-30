@@ -25,32 +25,32 @@ const AppNavigator = () => {
       <Stack.Screen
         name="Welcome"
         component={WelcomeScreen}
-        options={{ title: "Tela Inicial" }} // Título personalizável
+        options={{ title: "Tela Inicial", headerStyle:{backgroundColor: '#581c87' }, headerTintColor: '#ffffff' }} // Título personalizável
       />
       <Stack.Screen
         name="Login"
         component={LoginScreen}
-        options={{ title: "Acesse sua conta" }} // Título personalizável
+        options={{ title: "Acesse sua conta", headerStyle:{backgroundColor: '#581c87' }, headerTintColor: '#ffffff' }} // Título personalizável
       />
       <Stack.Screen
         name="SignUp"
         component={SignUpScreen}
-        options={{ title: "Cadastrar" }} // Título personalizável
+        options={{ title: "Cadastrar", headerStyle:{backgroundColor: '#581c87' }, headerTintColor: '#ffffff' }} // Título personalizável
       />
       <Stack.Screen
         name="ConsultationsList"
         component={ConsultationsListScreen}
-        options={{ title: "Consultas Agendadas" }} // Título personalizável
+        options={{ title: "Eventos Agendados", headerStyle:{backgroundColor: '#581c87' }, headerTintColor: '#ffffff' }} // Título personalizável
       />
       <Stack.Screen
         name="ScheduleConsultation"
         component={ScheduleConsultationScreen}
-        options={{ title: "Agendar Consulta" }} // Título personalizável
+        options={{ title: "Agendar Consulta", headerStyle:{backgroundColor: '#581c87' }, headerTintColor: '#ffffff' }} // Título personalizável
       />
       <Stack.Screen
         name="ConfirmAppointment"
         component={ConfirmAppointmentScreen}
-        options={{ title: "Confirmação de Agendamento" }} // Título personalizável
+        options={{ title: "Confirmação de Agendamento", headerStyle:{backgroundColor: '#581c87' }, headerTintColor: '#ffffff' }} // Título personalizável
       />
     </Stack.Navigator>
   );
